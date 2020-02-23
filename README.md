@@ -1,7 +1,7 @@
 # dots
 ### My Arch dot files.
 
-[Link to these dots](www.github.com/Signifies/dots)
+[Link to these dots](https://github.com/Signifies/dots)
 
 ## Images
 ![Imgur](https://i.imgur.com/5flLpQk.png)
