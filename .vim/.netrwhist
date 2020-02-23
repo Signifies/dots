@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/signifies/.cache/vim/swap'
+let g:netrw_dirhist_6='/home/signifies/.cache/vim'
+let g:netrw_dirhist_5='/home/signifies/lol'
+let g:netrw_dirhist_4='/home/signifies/Documents/rice/Arch/Xresources'
+let g:netrw_dirhist_3='/home/signifies/.config'
+let g:netrw_dirhist_2='/home/signifies/.config/bspwm'
+let g:netrw_dirhist_1='/home/signifies/.config'
