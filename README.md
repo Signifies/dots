@@ -1,5 +1,5 @@
 # dots
-### My Arch dot files.
+### My Arch dot files containing BSPWM, ranger, urxvt.
 
 [Link to these dots](https://github.com/Signifies/dots)
 
