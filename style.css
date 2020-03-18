@@ -1,0 +1,59 @@
+/*~/.cache/wal/colors.css*/
+@import "/home/signifies/.cache/wal/colors.css";
+
+* {
+      font-family: "Iosevka";
+      font-size: 20px;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--forground);
+}
+
+.data {
+  width: 700px;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  position: absolute;
+}
+
+.subjects {
+  float: left;
+  margin: 1;
+  width: 20%;
+  text-align: left;
+}
+
+.items {
+    float: left;
+    margin 0;
+    width: 80%;
+    text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--foreground);
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+a:visited {
+  color: var(--foreground);
+}
+
+.cat {
+  font-weight: 700;
+}
+
+
+p {
+  text-align: center;
+}
