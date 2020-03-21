@@ -20,9 +20,13 @@ home
 # Clock
 alt + c
 	sh $HOME/clock.sh	
+#
+# Open Rofi notes.
+super + n
+	~/scripts/rofi-todo.py -f $HOME/Documents/notes.json
 # Take a screenshot:
 control + Print
-	./scr.sh
+	~/scripts/scr.sh
 control + shift + l
 	betterlockscreen -l pixel -t "Locked"
 #
@@ -169,10 +173,17 @@ super + {minus,equal}
 		bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 4))
 
 # reset window gap
+# Default gaps
 super + shift + {minus}
-		bspc config -d focused window_gap 8
+	bspc config -d focused window_gap 8
+#
+#No gap
+super + ctrl + {equal}
+	bspc config -d focused window_gap 0
+#
+# Large gaps
 super + shift + {equal}
-		bspc config -d focused window_gap 40
+		bspc config -d focused window_gap 25
 
 #
 # flip/rotate

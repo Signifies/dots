@@ -1,0 +1,2 @@
+#!bin/bash
+$TERMINAL python3 ./scripts/rofi-todo.py ~/Documents/notes.json
