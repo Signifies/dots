@@ -7,22 +7,24 @@
 # echo "Moved James file."
 # # # # # # # # # # # # # # # # # # # #
 
+cp ~/.bash_profile ~/Documents/dots/
+
 # Update script to consolidate my dot files.
 
 # Xresources
-cp $HOME/.Xresources ~/.config/dots/
+cp $HOME/.Xresources ~/Documents/dots/
 #
 # Terminals settings
-cp $HOME/.bashrc ~/.config/dots/
+cp $HOME/.bashrc ~/Documents/dots/
 #
 # Feh settings
-cp $HOME/.fehbg ~/.config/dots/
+cp $HOME/.fehbg ~/Documents/dots/
 #
 # xinitrc
-cp $HOME/.xinitrc ~/.config/dots/
+cp $HOME/.xinitrc ~/Documents/dots/
 #
 # xserver
-cp $HOME/.xserverrc ~/.config/dots/
+cp $HOME/.xserverrc ~/Documents/dots/
 #
 # utlity scripts
 cp -r $HOME/scripts/ ~/.config/
@@ -35,7 +37,7 @@ cp -r ~/.config/bspwm/ $HOME/Documents/dots
 # sxhkd
 cp -r ~/.config/sxhkd/ $HOME/Documents/dots
 # Lemon Bar
-#cp -r ~/.config/panel $HOME/rice/Arch/
+cp -r ~/.config/panel/ $HOME/Documents/dots
 #echo "Copied Bar..."
 # Compton
 cp -r ~/.config/compton/ $HOME/Documents/dots
