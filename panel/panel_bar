@@ -1,118 +1,129 @@
-#! /bin/sh
-#
-# Example panel for lemonbar
+panel_workspaces() {
+	desktop=1
+	ws=""
+	IFS=':' read -a array <<< $(bspc wm --get-status)
+	for item in "${array[@]}"
+	do
+		name=${item#?}
+		if [ "$item" == "LT" ]
+		then
+			ws="${ws}%{S+}"
+		else
+			desk=""
+			case $item in
+				O*) # focused occupied
+					desk="%{R} ${name} %{R}"
+				;;
+				F*) # focused free
+					desk="%{R} ${name} %{R}"
+				;;
+				U*) # focused urgent
+					desk="%{R} ${name} %{R}"
+				;;
+				o*) # occupied
+					desk=" ${name} "
+				;;
+				f*) # free
+					desk=" ${name} "
+				;;
+				u*) # urgent
+					desk=" {$name} "
+				;;
+			esac
+			shift
+			if [ "$desk" != "" ]
+			then
+				ws="${ws}%{A:bspc desktop -f ^$desktop:}${desk}%{A}"
+				desktop=$((desktop+1))
+			fi
+		fi
+	done
+	ws="${ws}${S0}"
+	echo "${ws}"
+}
 
-. panel_colors
 
-num_mon=$(bspc query -M | wc -l)
+cpuload() {
+    LINE=`ps -eo pcpu |grep -vE '^\s*(0.0|%CPU)' |sed -n '1h;$!H;$g;s/\n/ +/gp'`
+    echo "bc <<< $LINE"
+}
 
-while read -r line ; do
-	case $line in
-		S*)
-			# clock output
-			sys="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
-			;;
-		T*)
-			# xtitle output
-			title="%{F$COLOR_TITLE_FG}%{B$COLOR_TITLE_BG} ${line#?} %{B-}%{F-}"
-			;;
-		W*)
-			# bspwm's state
-			wm=
-			IFS=':'
-			set -- ${line#?}
-			while [ $# -gt 0 ] ; do
-				item=$1
-				name=${item#?}
-				case $item in
-					[mM]*)
-						case $item in
-							m*)
-								# monitor
-								FG=$COLOR_MONITOR_FG
-								BG=$COLOR_MONITOR_BG
-								on_focused_monitor=
-								;;
-							M*)
-								# focused monitor
-								FG=$COLOR_FOCUSED_MONITOR_FG
-								BG=$COLOR_FOCUSED_MONITOR_BG
-								on_focused_monitor=1
-								;;
-						esac
-						[ $num_mon -lt 2 ] && shift && continue
-						wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc monitor -f ${name}:} ${name} %{A}%{B-}%{F-}"
-						;;
-					[fFoOuU]*)
-						case $item in
-							f*)
-								# free desktop
-								FG=$COLOR_FREE_FG
-								BG=$COLOR_FREE_BG
-								UL=$BG
-								;;
-							F*)
-								if [ "$on_focused_monitor" ] ; then
-									# focused free desktop
-									FG=$COLOR_FOCUSED_FREE_FG
-									BG=$COLOR_FOCUSED_FREE_BG
-									UL=$BG
-								else
-									# active free desktop
-									FG=$COLOR_FREE_FG
-									BG=$COLOR_FREE_BG
-									UL=$COLOR_FOCUSED_FREE_BG
-								fi
-								;;
-							o*)
-								# occupied desktop
-								FG=$COLOR_OCCUPIED_FG
-								BG=$COLOR_OCCUPIED_BG
-								UL=$BG
-								;;
-							O*)
-								if [ "$on_focused_monitor" ] ; then
-									# focused occupied desktop
-									FG=$COLOR_FOCUSED_OCCUPIED_FG
-									BG=$COLOR_FOCUSED_OCCUPIED_BG
-									UL=$BG
-								else
-									# active occupied desktop
-									FG=$COLOR_OCCUPIED_FG
-									BG=$COLOR_OCCUPIED_BG
-									UL=$COLOR_FOCUSED_OCCUPIED_BG
-								fi
-								;;
-							u*)
-								# urgent desktop
-								FG=$COLOR_URGENT_FG
-								BG=$COLOR_URGENT_BG
-								UL=$BG
-								;;
-							U*)
-								if [ "$on_focused_monitor" ] ; then
-									# focused urgent desktop
-									FG=$COLOR_FOCUSED_URGENT_FG
-									BG=$COLOR_FOCUSED_URGENT_BG
-									UL=$BG
-								else
-									# active urgent desktop
-									FG=$COLOR_URGENT_FG
-									BG=$COLOR_URGENT_BG
-									UL=$COLOR_FOCUSED_URGENT_BG
-								fi
-								;;
-						esac
-						wm="${wm}%{F${FG}}%{B${BG}}%{U${UL}}%{+u}%{A:bspc desktop -f ${name}:} ${name} %{A}%{B-}%{F-}%{-u}"
-						;;
-					[LTG]*)
-						# layout, state and flags
-						wm="${wm}%{F$COLOR_STATE_FG}%{B$COLOR_STATE_BG} ${name} %{B-}%{F-}"
-						;;
-				esac
-				shift
-			done
-			;;
-	esac
-	printf "%s\n" "%{l}${title}%{c}${wm}%{r}${sys}"
+panel_title() {
+	title=""
+	case $(bspc query -M -m focused) in
+		DP-2)
+			title="%{S0}"
+		;;
+		DP-4)
+			title="%{S1}"
+		;;
+		esac
+	echo "${title}$(xtitle)${S0}"
+}
+
+panel_clock() {
+	echo " %{A:$XDG_CONFIG_HOME/panel/popup_cal &:}%{F#fff3f3f3} $(date +'%H:%M:%S - %D') %{A}%{F-}%{B-} "
+}
+
+# check and output the network connection state
+network() {
+	# The following assumes you have 3 interfaces: loopback, ethernet, wifi
+	read lo int1 int2 <<< `ip link | sed -n 's/^[0-9]: \(.*\):.*$/\1/p'`
+	# iwconfig returns an error code if the interface tested has no wireless
+	# extensions
+	if iwconfig $int1 >/dev/null 2>&1; then
+	    wifi=$int1
+	    eth0=$int2
+	else
+	    wifi=$int2
+	    eth0=$int1
+	fi
+	# in case you have only one interface, just set it here:
+	# int=eth0
+	# this line will set the variable $int to $eth0 if it's up, and $wifi
+	# otherwise. I assume that if ethernet is UP, then it has priority over
+	# wifi. If you have a better idea, please share :)
+	ip link show $eth0 | grep 'state UP' >/dev/null && int=$eth0 || int=$wifi
+	# just output the interface name. Could obviously be done in the 'ping'
+	# query
+	echo -n "$int"
+	# Send a single packet, to speed up the test. I use google's DNS 8.8.8.8,
+	# but feel free to use any ip address you want. Be sure to put an IP, not a
+	# domain name. You'll bypass the DNS resolution that can take some precious
+	# miliseconds ;)
+	# synj - added -s1 to save data on metered connections
+	ping -c1 -s1 8.8.8.8 >/dev/null 2>&1 && echo "connected" || echo "%{F#FF0000}REEEEEEEEEEEE" #lol put REEEEEEE here when there's no internet.
+}
+
+# Prints the above network test, up/down speed. 
+_netw() {
+  int="enp0s31f6" # set your wifi interface
+  downr=`cat /sys/class/net/$int/statistics/rx_bytes`
+  upt=`cat /sys/class/net/$int/statistics/tx_bytes`
+
+   sleep 0.1
+
+  downn=`cat /sys/class/net/$int/statistics/rx_bytes`
+  upn=`cat /sys/class/net/$int/statistics/tx_bytes`
+  countr=`expr $downn - $downr`
+  countt=`expr $upn - $upt`
+  up=`expr $countt / 1024`
+  down=`expr $countr / 1024`
+
+  # rx = downspeed
+  # tx = upspeed
+   echo " %{F#fff3f3f3}net: %{F#32CD32}$(network) %{F-}|%{F#fff3f3f3} up %{F#CC939B}$up%{F-} kBps | %{F#fff3f3f3}down $down%{F-} kBps %{F-}%{B-}%{A} "
+}
+# Simply prints the connection status.
+net() {
+echo "%{F#fff3f3f3}net: %{F#32CD32}$(network) %{F-}%{B-}"
+
+}
+# print to panel
+
+# Check test.sh for other potential features too.
+
+while [ "$(pidof bspwm)" != "" ]; do
+	echo " %{c}$(panel_workspaces)" \  "%{r}$(panel_title)" \ "%{l}$(panel_clock)$(net)"
+	sleep 0.1s
 done

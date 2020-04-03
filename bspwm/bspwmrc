@@ -6,10 +6,12 @@ firefox &
 htop &
 spotify &
 
-#$HOME/.config/panel/panel & 
-
-bspc monitor HDMI-2 -d I II III IV V
-bspc monitor HDMI-1 -d VI VII VIII IX X
+#bspc monitor HDMI-2 -d א ב ב ד ה
+#bspc monitor -d one two three four five six seven eight nine ten 
+#bspc monitor -d I II III IV V VI VII VIII IX X
+#bspc monitor HDMI-1 -d ו ז ח ט י
+bspc monitor HDMI-2 -d one two three four five
+bspc monitor HDMI-1 -d six seven eight nine ten
 
 #Source for colors
 ."$HOME/.cache/wal/colors.sh"
@@ -23,15 +25,15 @@ bspc config borderless_monocle    false
 bspc config gapless_monocle       false
 bspc config normal_border_color   $color1
 bspc config focused_border_color  $color3
-bspc config active_border_color   $color5
+bspc config active_border_color   $color8
 
 
 bspc rule -a Firefox Mozilla desktop='^1' state=tiled
 bspc rule -a urxvt desktop='^6' state=tiled
-bspc rule -a Spotify desktop='^6' state=tiled
+bspc rule -a Spotify Premium desktop='^6' state=tiled
 
-# 
-xsetroot -cursor_name left_ptr
+#
+
 
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
@@ -40,5 +42,5 @@ xsetroot -cursor_name left_ptr
 #bspc rule -a Kupfer.py focus=on
 #bspc rule -a Screenkey manage=off
 
-#feh --bg-scale ~/Documents/rice/Arch/ocean.jpeg 
+#feh --bg-scale ~/Documents/rice/Arch/ocean.jpeg
 panel &

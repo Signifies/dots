@@ -65,7 +65,11 @@ control + 8
 
 # quit bspwm normally
 super + alt + Escape
-	bspc quit
+	PKILL -X panel; bspc quit
+# Quit lemonbar
+super + alt + p
+	PKILL -X panel 
+
 
 # close and kill
 super + {_,shift + }w
