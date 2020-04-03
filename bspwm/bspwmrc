@@ -6,8 +6,10 @@ firefox &
 htop &
 spotify &
 
+
+# Hebrew still isn't working. :[
 #bspc monitor HDMI-2 -d א ב ב ד ה
-#bspc monitor -d one two three four five six seven eight nine ten 
+#bspc monitor -d one two three four five six seven eight nine ten
 #bspc monitor -d I II III IV V VI VII VIII IX X
 #bspc monitor HDMI-1 -d ו ז ח ט י
 bspc monitor HDMI-2 -d one two three four five
@@ -31,16 +33,6 @@ bspc config active_border_color   $color8
 bspc rule -a Firefox Mozilla desktop='^1' state=tiled
 bspc rule -a urxvt desktop='^6' state=tiled
 bspc rule -a Spotify Premium desktop='^6' state=tiled
-
-#
-
-
-
-#bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
-#bspc rule -a mplayer2 state=floating
-#bspc rule -a Kupfer.py focus=on
-#bspc rule -a Screenkey manage=off
 
 #feh --bg-scale ~/Documents/rice/Arch/ocean.jpeg
 panel &
