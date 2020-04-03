@@ -5,7 +5,8 @@
 
 ## Images
 
-[Imgur](htps://i.imgur.com/L3eik5e)
+![Imgur](https://imgur.com/L3eik5e)
+
 ![Imgur](https://i.imgur.com/5flLpQk.png)
 
 ![Imgur](https://i.imgur.com/7P8X6Ut.png)
