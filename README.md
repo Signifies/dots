@@ -1,2 +1,1 @@
-
 ## My Arch Linux . files.
