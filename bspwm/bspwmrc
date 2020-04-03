@@ -6,7 +6,7 @@ firefox &
 htop &
 spotify &
 
-
+#
 # Hebrew still isn't working. :[
 #bspc monitor HDMI-2 -d א ב ב ד ה
 #bspc monitor -d one two three four five six seven eight nine ten
