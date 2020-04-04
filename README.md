@@ -3,6 +3,7 @@
 [Link to these dots](https://github.com/Signifies/dots)
 
 ## Images
+
 ![Imgur](https://imgur.com/L3eik5e)
 
 ![Imgur](https://i.imgur.com/5flLpQk.png)
