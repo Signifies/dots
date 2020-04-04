@@ -4,15 +4,16 @@
 
 ## Images
 
-![Imgur](https://imgur.com/L3eik5e)
+![Imgur](https://i.imgur.com/L3eik5e)
 
 ![Imgur](https://i.imgur.com/5flLpQk.png)
 
 ![Imgur](https://i.imgur.com/7P8X6Ut.png)
 
 ## Bar
-![Imgur](https://imgur.com/yMLuBcy)
+![Imgur](https://i.imgur.com/yMLuBcy)
 
 ## Rofi
-![Imgur](https://imgur.com/ZeBp3aB)
-![Imgur](https://imgur.com/HVUlnhJ)
+![Imgur](https://i.imgur.com/ZeBp3aB)
+
+![Imgur](https://i.imgur.com/HVUlnhJ)
