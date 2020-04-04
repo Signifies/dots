@@ -5,16 +5,16 @@
 
 ## Images
 
-![Imgur](https://imgur.com/L3eik5e)
+![aqua](https://imgur.com/L3eik5e)
 
-![Imgur](https://i.imgur.com/5flLpQk.png)
+![sand](https://i.imgur.com/5flLpQk.png)
 
-![Imgur](https://i.imgur.com/7P8X6Ut.png)
+![idl](https://i.imgur.com/7P8X6Ut.png)
 
 ## Bar
-![Imgur](https://i.imgur.com/yMLuBcy)
+![bar](https://i.imgur.com/yMLuBcy)
 
 ## Rofi
-![Imgur](https://i.imgur.com/ZeBp3aB)
+![rofi1](https://i.imgur.com/ZeBp3aB)
 
-![Imgur](https://i.imgur.com/HVUlnhJ)
+![rofi2](https://i.imgur.com/HVUlnhJ)
