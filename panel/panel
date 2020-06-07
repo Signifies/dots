@@ -16,7 +16,7 @@ bspc subscribe report > "$PANEL_FIFO" &
 
 . panel_colors
 . "$HOME/.cache/wal/colors.sh"
-panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -u 2 -n "$PANEL_WM_NAME" -g 1250x30+340+8 -b -f "Iosevka" -F "$color8" -B "$color0" | sh &
+panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -u 2 -n "$PANEL_WM_NAME" -g 700x30+15+7 -b -f "Noto Sans Hebrew" -F "$color8" -B "$color0" | sh &
 
 
 wid=$(xdo id -m -a "$PANEL_WM_NAME")

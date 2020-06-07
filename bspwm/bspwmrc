@@ -6,19 +6,18 @@ firefox &
 htop &
 spotify &
 
-#
-# Hebrew still isn't working. :[
-#bspc monitor HDMI-2 -d א ב ב ד ה
+#bspc monitor HDMI-2 -d 
 #bspc monitor -d one two three four five six seven eight nine ten
-#bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor HDMI-2  -d I II III IV V
+bspc monitor HDMI-1 -d VI VII VIII IX X
 #bspc monitor HDMI-1 -d ו ז ח ט י
-bspc monitor HDMI-2 -d one two three four five
-bspc monitor HDMI-1 -d six seven eight nine ten
+#bspc monitor HDMI-2 -d one two three four five
+#bspc monitor HDMI-1 -d six seven eight nine ten
 
 #Source for colors
 ."$HOME/.cache/wal/colors.sh"
 
-bspc config border_width          4
+bspc config border_width          2
 bspc config border_radius	  10
 bspc config window_gap            15
 bspc config split_ratio           0.52
@@ -32,7 +31,8 @@ bspc config active_border_color   $color8
 
 bspc rule -a Firefox Mozilla desktop='^1' state=tiled
 bspc rule -a urxvt desktop='^6' state=tiled
-bspc rule -a Spotify Premium desktop='^6' state=tiled
+bspc rule -a Spotify='^6' state=tiled
+bspc rule -a qutebrowser desktop='3' state=floating
 
 #feh --bg-scale ~/Documents/rice/Arch/ocean.jpeg
 panel &

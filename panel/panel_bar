@@ -62,7 +62,7 @@ panel_title() {
 }
 
 panel_clock() {
-	echo " %{A:$XDG_CONFIG_HOME/panel/popup_cal &:}%{F#fff3f3f3} $(date +'%H:%M:%S - %D') %{A}%{F-}%{B-} "
+	echo " %{A:$XDG_CONFIG_HOME/panel/popup_cal &:}%{F#fff3f3f3} $(date +'%H:%M:%S | %D') %{A}%{F-}%{B-} "
 }
 
 # check and output the network connection state
@@ -116,14 +116,35 @@ _netw() {
 }
 # Simply prints the connection status.
 net() {
-echo "%{F#fff3f3f3}net: %{F#32CD32}$(network) %{F-}%{B-}"
+echo "%{F#fff3f3f3}etho0: %{F#32CD32}$(network) %{F-}%{B-}"
 
 }
 # print to panel
 
+# Music
+
+MUSIC_SLEEP=5
+SEP=" "
+CLR="${SEP}${B-}${F-}"
+GLYMUSIC=$(echo -e "\ue0fe")
+ sptfy()
+{
+    while true; do
+        title=$(music)
+
+        if [[ -z $(music) ]]; then
+            echo "MUSIC ${GLYMUSIC}${SEP}..${CLR}"
+        else
+            echo "MUSIC ${GLYMUSIC}${SEP}${title}${CLR}"
+        fi
+
+        sleep ${MUSIC_SLEEP}
+    done
+}
+
 # Check test.sh for other potential features too.
 
 while [ "$(pidof bspwm)" != "" ]; do
-	echo " %{c}$(panel_workspaces)" \  "%{r}$(panel_title)" \ "%{l}$(panel_clock)$(net)"
+	echo " %{l}$(panel_workspaces)"  "%{r}$(panel_clock) %{c} $(net)"
 	sleep 0.1s
 done

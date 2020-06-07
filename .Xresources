@@ -47,7 +47,7 @@
 *URxvt*scrollBar: false
 *URxvtcursorBlink: true
 *URxvt*cursorBlink: true
-*URxvt*internalBorder: 25
+*URxvt*internalBorder: 35
 URxvt.geometry: 92x24
 !! *URxvt*transparent: true
 !! *URxvt.shading: 35
