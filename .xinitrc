@@ -14,5 +14,7 @@ xsetroot -cursor_name left_ptr
 
 wal -R
 
+ntpd -qg 
+
 exec bspwm
 
