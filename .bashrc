@@ -9,5 +9,5 @@
 alias ls='ls --color=auto'
 PS1='=> '
 
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
