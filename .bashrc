@@ -6,8 +6,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 PS1='=> '
+alias ufetch="sh $HOME/ufetch/ufetch-arch"
 
-#(cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
+
 
