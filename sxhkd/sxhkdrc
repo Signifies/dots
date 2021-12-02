@@ -23,7 +23,7 @@ alt + c
 #
 # Open Rofi notes.
 super + n
-	~/scripts/rofi-todo.py -f $HOME/Documents/notes.json
+	$HOME/scripts/rofi-todo.py -f $HOME/Documents/notes.json
 # Take a screenshot:
 control + Print
 	~/scripts/scr.sh
@@ -40,10 +40,10 @@ super + Escape
 
 # Change desktop backgrounds - current
 control + 1
-	wal -i ~/.config/wallpapers/water-tree.jpg
+	wal -i ~/Downloads/MMW.jpg
 # water beach
 control + 2
-	wal -i ~/.config/wallpapers/waterbeach.jpg
+	wal -i ~/.Downloads/mars1.jpg
 # Au ocean
 control + 3
 	wal -i ~/.config/wallpapers/auocean.jpeg

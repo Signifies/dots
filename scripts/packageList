@@ -1,0 +1,6 @@
+#! /bin/sh		
+
+cd $HOME/files
+pacman -Qq > packages.txt
+
+echo "Created text file of all current packages on system."

@@ -1,0 +1,27 @@
+Rofi broke with version 1.7, so the package has been downgraded on this system to the below version information.
+
+fyi. see below article for info on what I did.
+https://blog.wretchednet.com/rofi-theme-broken-after-latest-1-7-update/
+
+Name            : rofi
+Version         : 1.6.1-1
+Description     : A window switcher, application launcher and dmenu replacement
+Architecture    : x86_64
+URL             : https://github.com/DaveDavenport/rofi
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : libxdg-basedir  startup-notification  libxkbcommon-x11  xcb-util-wm  xcb-util-xrm  librsvg
+Optional Deps   : i3-wm: use as a window switcher
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 573.70 KiB
+Packager        : Morten Linderud <foxboron@archlinux.org>
+Build Date      : Mon 23 Nov 2020 07:45:22 PM UTC
+Install Date    : Tue 30 Nov 2021 06:00:49 AM UTC
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : None
+

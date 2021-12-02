@@ -7,11 +7,10 @@
 # echo "Moved James file."
 # # # # # # # # # # # # # # # # # # # #
 
-#cp ~/.bash_profile ~/Documents/dots/
+cp ~/.bash_profile ~/Documents/dots/
 
 # Update script to consolidate my dot files.
-# wallpapers
-cp $HOME/Pictures/MMW.jpg $HOME/Documents/dots
+
 # Xresources
 cp $HOME/.Xresources ~/Documents/dots/
 #
@@ -24,13 +23,13 @@ cp $HOME/.fehbg ~/Documents/dots/
 # xinitrc
 cp $HOME/.xinitrc ~/Documents/dots/
 #
-# xserver not using rn.
-#cp $HOME/.xserverrc ~/Documents/dots/
+# xserver
+cp $HOME/.xserverrc ~/Documents/dots/
 #
 # utlity scripts
-cp -r $HOME/scripts/ $HOME/Documents/dots
+cp -r $HOME/scripts/ ~/.config/
 
-#echo "added all  .files to ~/.config/dots"
+echo "added all  .files to ~/.config/dots"
 
 # # # # # # # # # # # # # # # # #
 # BSPWM
@@ -38,29 +37,18 @@ cp -r ~/.config/bspwm/ $HOME/Documents/dots
 # sxhkd
 cp -r ~/.config/sxhkd/ $HOME/Documents/dots
 # Lemon Bar
-# cp -r ~/.config/panel/ $HOME/Documents/dots no panel rn.
+#cp -r ~/.config/panel/ $HOME/Documents/dots
 #echo "Copied Bar..."
 # Compton
-#cp -r ~/.config/compton/ $HOME/Documents/dots no compton
-#feh
-cp ~/.fehbg $HOME/Documents/dots
-#
-# ufetch
-cp -r ~/ufetch $HOME/Documents/dots
-# packages information script.
-uname -a > packages.txt
-echo "# # # system packages ->" >> packages.txt
-pacman -Q >> packages.txt
-echo "copied system packages..."
-#
+#cp -r ~/.config/compton/ $HOME/Documents/dots
 cp ~/.vimrc $HOME/Documents/dots
 # Vim files
 cp -r ~/.vim/ $HOME/Documents/dots
-# Scripts 
+# Scripts
+cp -r ~/.config/scripts/ $HOME/Documents/dots
 cp -r ~/.config/ranger/ $HOME/Documents/dots
 cp -r ~/.config/rofi/ $HOME/Documents/dots
 cp -r ~/.config/wal/ $HOME/Documents/dots
 cp -r ~/.config/htop/ $HOME/Documents/dots
-#cp -r ~/.config/cava/ $HOME/Documents/dots no cava.
-echo "Added all ~/.config/ files to the github repository" 
-echo $(date) 
+cp -r ~/.config/cava/ $HOME/Documents/dots
+echo "Added all ~/.config/ files to the github repository"
