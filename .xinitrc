@@ -13,8 +13,8 @@ xrdb -merge ~/.Xresources
 xsetroot -cursor_name left_ptr
 
 wal -R
-
-ntpd -qg 
+# Commenting ntpd out, used timedatectl set-ntp 1
+#ntpd -qg 
 
 exec bspwm
 

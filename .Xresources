@@ -2,10 +2,10 @@
 *URxvt*scrollBar: false
 *URxvtcursorBlink: true
 *URxvt*cursorBlink: true
-*URxvt*internalBorder: 40
-*URxvt.geometry: 80x20
-!! *URxvt*transparent: true
-!! *URxvt.shading: 35
+*URxvt*internalBorder: 50
+*URxvt.geometry: 80x24
+*URxvt*transparent: true
+*URxvt.shading: 35
 *URxvt*font: xft:SourceCodePro-Regular:style=Medium:size=12
 *URxvt*boldFont: xft:SourceCodePro-Bold:style=Bold:size=12
 *URxvt*italicFont: xft:SourceCodePro-MediumIt:style=Italic:size=11

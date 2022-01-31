@@ -6,9 +6,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#alias ls='ls --color=auto'
+#Hostname/terminal prompt
 PS1='=> '
+#
+# Alias's
+alias ls='ls --color=auto'
 alias ufetch="sh $HOME/ufetch/ufetch-arch"
+alias ..='cd ..'
+alias mls='ls -hspt --color=auto'
 
 (cat ~/.cache/wal/sequences &)
 
