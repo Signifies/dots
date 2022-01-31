@@ -1,0 +1,8 @@
+# # # Fixing rofi version 1.6
+
+sudo pacman -U /var/cache/pacman/pkg/rofi-1.6.1-1-x86_64.pkg.tar.zst
+
+echo "fixed rofi setup"
+
+
+

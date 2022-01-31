@@ -8,10 +8,16 @@ super + Return
 # Firefox 
 super + shift + F
 	firefox
+# Qutebrowser
+super + shift + Q 
+	qutebrowser
+#
 # program launcher using rofi.
 super + @space
 	rofi -show drun
 #
+control + shift + W
+	nmcli device wifi list | rofi -i -dmenu | awk '{print }'|xargs nmcli dev wifi connect
 # Rofi window menu
 alt + @space
   rofi -show window
@@ -19,14 +25,14 @@ home
 	super + 7 
 # Clock
 alt + c
-	sh $HOME/clock.sh	
+	sh $HOME/scripts/time.sh	
 #
 # Open Rofi notes.
-super + n
-	$HOME/scripts/rofi-todo.py -f $HOME/Documents/notes.json
+#super + n Needs to be fixed.
+	#$HOME/scripts/rofi-todo.py -f $HOME/Documents/notes.json
 # Take a screenshot:
 control + Print
-	~/scripts/scr.sh
+	sh $HOME/scripts/scr.sh
 control + shift + l
 	betterlockscreen -l pixel -t "Locked"
 #
@@ -41,12 +47,12 @@ super + Escape
 # Change desktop backgrounds - current
 control + 1
 	wal -i ~/Downloads/MMW.jpg
-# water beach
+# The Pella
 control + 2
-	wal -i ~/.Downloads/mars1.jpg
-# Au ocean
+	wal -i ~/Pictures/newExpanse/pella02.PNG
+# Hawai'i 
 control + 3
-	wal -i ~/.config/wallpapers/auocean.jpeg
+	wal -i ~/Pictures/2849099.jpg
 control + 4
 	wal -i ~/.config/wallpapers/chemarch.jpg
 control + 5
@@ -69,7 +75,6 @@ super + alt + Escape
 # Quit lemonbar
 super + alt + p
 	PKILL -X panel 
-
 
 # close and kill
 super + {_,shift + }w

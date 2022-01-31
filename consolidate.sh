@@ -13,6 +13,9 @@
 # wallpapers
 cp $HOME/Pictures/MMW.jpg $HOME/Documents/dots
 # Xresources
+# Notes
+cp $HOME/arch.md ~/Documents/dots
+#
 cp $HOME/.Xresources ~/Documents/dots/
 #
 # Terminals settings

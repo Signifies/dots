@@ -4,13 +4,14 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 urxvt &
 firefox &
 Spotify &
+picom &
 
 bspc monitor HDMI-2 -d 1 2 3 4 5
 bspc monitor HDMI-1 -d 6 7 8 9 10 
 
 
-bspc config border_width         3
-bspc config window_gap          15
+bspc config border_width         5
+bspc config window_gap          20
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
