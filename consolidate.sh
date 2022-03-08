@@ -36,7 +36,8 @@ cp -r $HOME/scripts/ $HOME/Documents/dots
 #echo "added all  .files to ~/.config/dots"
 
 # # # # # # # # # # # # # # # # #
-# BSPWM
+cp -r $HOME/.config/polybar $HOME/Documents/dots 
+# bspwm
 cp -r ~/.config/bspwm/ $HOME/Documents/dots
 # sxhkd
 cp -r ~/.config/sxhkd/ $HOME/Documents/dots
@@ -59,11 +60,13 @@ echo "copied system packages..."
 cp ~/.vimrc $HOME/Documents/dots
 # Vim files
 cp -r ~/.vim/ $HOME/Documents/dots
-# Scripts 
-cp -r ~/.config/ranger/ $HOME/Documents/dots
+# Scripts
+cp -R ~/.config/nvim/ $HOME/Documents/dots
+cp -R ~/.config/ranger/ $HOME/Documents/dots
 cp -r ~/.config/rofi/ $HOME/Documents/dots
 cp -r ~/.config/wal/ $HOME/Documents/dots
 cp -r ~/.config/htop/ $HOME/Documents/dots
+cp -R ~/.config/polybar $HOME/Documents/dots
 #cp -r ~/.config/cava/ $HOME/Documents/dots no cava.
-echo "Added all ~/.config/ files to the github repository" 
-echo $(date) 
+echo "Added all ~/.config/ files to the github repository"
+echo $(date)

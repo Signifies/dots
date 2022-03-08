@@ -1,0 +1,200 @@
+[bar/pella]
+
+;------------;
+; DIMENSIONS ;
+;------------;
+
+width = 100%
+height = 26
+offset-y = 8
+offset-x = 0
+
+border-size = 0 
+
+;----------;
+; LOCATION ;
+;----------;
+
+bottom = true
+monitor = HDMI-2
+;monitor = HDMI-1 
+override-redirect = false
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0="SourceCodePro-Regular:pixelsize=12;1"
+
+;---------;
+; MODULES ;
+;---------;
+
+modules-right=pulseaudio cpu temperature 
+modules-left=date network 
+modules-center=bspwm
+
+;--------;
+; COLORS ;
+;--------;
+
+foreground = #2a1a24
+background = #001a1a24
+
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
+
+fixed-center = true
+tray-position = right
+tray-detached = false
+module-margin-left = 1
+
+[module/subs]
+type = custom/ipc
+
+hook-0 = date
+hook-1 = whoami
+hook-2 = echo "Files in ${HOME}: $(ls -1a ~ | wc -l)"
+
+inital = 2 
+
+[module/fs-home]
+type = internal/fs 
+mount-0 = / 
+format = "<label>"
+label-mounted = %mountpoint%: %free%
+label-foreground = #cddbf9
+label-background = #884b3b 
+
+
+[module/battery]
+type=internal/battery
+
+battery=BAT0
+adapter=AC
+
+poll-interval=5
+full-at=98
+
+time-format=%H:%M
+
+label-discharging=%time% %percentage%
+label-charging=%time% %percentage%
+label-full=BAT0: %percentage%
+
+label-full-foreground = #cddbf9
+label-full-background = #001a1a24
+label-full-padding = 2
+
+label-charging-foreground = #cddbf9
+label-charging-background = #001a1a24
+label-charging-padding = 2
+
+label-discharging-foreground = #cddbf9
+label-discharging-background = #001a1a24
+label-discharging-padding = 2
+
+format-discharging=<label-discharging>
+format-charging=<label-charging>
+format-full=<label-full>
+
+[module/date]
+type=internal/date
+interval=1.0
+date=%Y-%m-%d
+time=%H:%M:%S
+time-alt=%H:%M:%S %A, %d %B %Y
+
+format=<label>
+label=%date% %time%
+label-foreground = #cddbf9
+label-background = #001a1a24
+label-padding = 1
+
+[module/temperature]
+type=internal/temperature
+interval=1.0
+hwmon-path=
+base-temperature=38
+warn-temperature=70
+format=<label>
+format-warn=<label-warn>
+label=TEMP: %temperature-c%
+label-warn=TEMP: %temperature-c%
+
+label-foreground = #cddbf9
+label-background = #001a1a24
+label-padding = 1
+label-warn-foreground = #cddbf9
+label-warn-background = #001a1a24
+label-warn-padding = 1
+
+[module/cpu]
+type=internal/cpu
+interval=0.5
+format=<label>
+label=CPU: %percentage%%
+
+label-foreground = #cddbf9
+label-background = #001a1a24
+label-padding = 1
+
+[module/memory]
+type=internal/memory
+interval=3
+format=<label>
+label=Mem: %gb_used%
+
+label-foreground = #cddbf9
+label-background = #001a1a24
+label-padding = 1
+
+[module/pulseaudio]
+type=internal/pulseaudio 
+format=<label-volume>
+label-volume=Vol: %percentage%%
+label-muted=muted
+click-right=pavucontrol
+
+label-volume-foreground = #cddbf9
+label-volume-background = #001a1a24
+label-volume-padding = 1 
+
+label-muted-foreground = #cddbf9
+label-muted-background = #884B3B 
+label-muted-padding = 1 
+
+[module/bspwm]
+type=internal/bspwm
+format=<label-state> <label-mode>
+label-focused=%name%
+label-focused-padding=2
+label-occupied=%name%
+label-occupied-padding=2 
+label-empty=%name%
+label-empty-padding=2 
+
+label-focused-foreground = #f6bbe7
+label-focused-background = #50413E
+label-occupied-foreground = #cddbf9 
+label-occupied-background = #ac0138 
+label-empty-foreground = #cddbf9
+label-empty-background = #001a1a24
+
+[module/network]
+type=internal/network
+interface=enp0s31f6
+interval=3.0
+label-connected=%ifname%: %upspeed%|%downspeed%
+label-disconnected="%ifname%: offline"
+
+label-connected-foreground = #cddbf9
+label-connected-background = #50413E 
+label-connected-padding = 1
+
+label-disconnected-foreground = #cddbf9
+label-disconnected-background = #FF0000
+label-disconnected-padding = 1
+
+; vim: set ft=dosini nomodeline:

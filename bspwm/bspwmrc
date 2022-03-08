@@ -6,9 +6,8 @@ firefox &
 Spotify &
 picom &
 
-bspc monitor HDMI-2 -d 1 2 3 4 5
-bspc monitor HDMI-1 -d 6 7 8 9 10 
-
+bspc monitor HDMI-2 -d primary progamming terminal sys-status 
+bspc monitor HDMI-1 -d 1 2 3 4 5
 
 bspc config border_width         5
 bspc config window_gap          20

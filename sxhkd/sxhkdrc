@@ -34,7 +34,7 @@ alt + c
 control + Print
 	sh $HOME/scripts/scr.sh
 control + shift + l
-	betterlockscreen -l pixel -t "Locked"
+	betterlockscreen -l
 #
 # Take a screenshot by selection
 alt + shift + s
