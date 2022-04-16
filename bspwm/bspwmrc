@@ -5,22 +5,41 @@ urxvt &
 firefox &
 Spotify &
 picom &
+ranger &
+$HOME/.config/polybar/launch.sh &
 
-bspc monitor HDMI-2 -d primary progamming terminal sys-status 
-bspc monitor HDMI-1 -d 1 2 3 4 5
+# Colors
+. "$HOME/.cache/wal/colors.sh"
+bspc monitor HDMI-2 -d primary terminals progrm sys-status  
+bspc monitor HDMI-1 -d 01 02 03 04 05 
+
+# This still remains broken.
+#for monitor in $(bspc query -M); do 
+#  bspc monitor $monitor -d 01 02 03 04 05 06 07 08 
+#done 
 
 bspc config border_width         5
 bspc config window_gap          20
 
+bspc config normal_border_color $color1 
+bspc config active_border_color $color8
+bspc config focused_border_color $color6
+
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox  desktop='^1' state=floating
 #bspc rule -a mplayer2 state=floating
 bspc rule -a Spotify desktop='^1'
 bspc rule -a urxvt desktop='^1'
-bspc rule -a Kupfer.py focus=on
+bspc rule -a ranger desktop=^2 state=floating
 #bspc rule -a Screenkey manage=off
 #feh --bg-scale ~/Pictures/auocean.jpeg
+
+#bspc rule -a URxvt:scratchy sticky=on state=floating rectangle=widthxheight+Xoffset+Yoffset
+
+

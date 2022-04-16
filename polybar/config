@@ -1,3 +1,28 @@
+[bar/pella2]
+
+width = 100%
+height = 26
+offset-y = 8 
+offset-x = 0 
+
+border-size = 0 
+
+bottom = true 
+monitor = HDMI-1 
+override-redirect = false 
+
+font-0="SourceCodePro-Regular:pixelsize=12;1"
+modules-left=bspwm 
+modules-center=date pulseaudio
+
+foreground =#9DA141
+background =#001a1a24 
+
+fixed-center = true 
+tray-detached = false
+tray-position = right 
+module-margin-left = 1 
+
 [bar/pella]
 
 ;------------;
@@ -10,6 +35,7 @@ offset-y = 8
 offset-x = 0
 
 border-size = 0 
+
 
 ;----------;
 ; LOCATION ;
@@ -31,8 +57,8 @@ font-0="SourceCodePro-Regular:pixelsize=12;1"
 ;---------;
 
 modules-right=pulseaudio cpu temperature 
-modules-left=date network 
-modules-center=bspwm
+modules-left=bspwm 
+modules-center=date network
 
 ;--------;
 ; COLORS ;

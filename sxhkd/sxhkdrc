@@ -1,7 +1,8 @@
 #
 # wm independent hotkeys
 #
-
+super + n 
+  sh $HOME/.config/bspwm/scratchy.sh 
 # terminal emulator
 super + Return
 	urxvt

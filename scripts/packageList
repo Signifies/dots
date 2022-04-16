@@ -1,6 +1,8 @@
 #! /bin/sh		
 
 cd $HOME/files
-pacman -Qq > packages.txt
-
+date > packages.txt
+uname -a >>
+echo "## system packages ##" >>> packages.txt 
+pacman -Qq >>>>packages.txt
 echo "Created text file of all current packages on system."

@@ -50,23 +50,25 @@ cp -r ~/.config/sxhkd/ $HOME/Documents/dots
 cp ~/.fehbg $HOME/Documents/dots
 #
 # ufetch
-cp -r ~/ufetch $HOME/Documents/dots
-# packages information script.
-uname -a > packages.txt
-echo "# # # system packages ->" >> packages.txt
-pacman -Q >> packages.txt
-echo "copied system packages..."
-#
+cp ~/ufetch/ufetch-arch $HOME/Documents/dots
+# packages information script. Depricated for package script. 
+#uname -a > packages.txt
+#echo "# # # system packages ->" >> packages.txt
+#pacman -Q >> packages.txt
+#echo "copied system packages..."
+# 
 cp ~/.vimrc $HOME/Documents/dots
 # Vim files
 cp -r ~/.vim/ $HOME/Documents/dots
 # Scripts
-cp -R ~/.config/nvim/ $HOME/Documents/dots
-cp -R ~/.config/ranger/ $HOME/Documents/dots
+cp -r ~/.config/nvim/ $HOME/Documents/dots
+cp -r~/.config/ranger/ $HOME/Documents/dots
 cp -r ~/.config/rofi/ $HOME/Documents/dots
 cp -r ~/.config/wal/ $HOME/Documents/dots
 cp -r ~/.config/htop/ $HOME/Documents/dots
-cp -R ~/.config/polybar $HOME/Documents/dots
+cp -r ~/.config/polybar $HOME/Documents/dots
 #cp -r ~/.config/cava/ $HOME/Documents/dots no cava.
+# Package script
+sh packages.sh 
 echo "Added all ~/.config/ files to the github repository"
 echo $(date)
