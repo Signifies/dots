@@ -62,7 +62,7 @@ cp ~/.vimrc $HOME/Documents/dots
 cp -r ~/.vim/ $HOME/Documents/dots
 # Scripts
 cp -r ~/.config/nvim/ $HOME/Documents/dots
-cp -r~/.config/ranger/ $HOME/Documents/dots
+cp -r ~/.config/ranger/ $HOME/Documents/dots
 cp -r ~/.config/rofi/ $HOME/Documents/dots
 cp -r ~/.config/wal/ $HOME/Documents/dots
 cp -r ~/.config/htop/ $HOME/Documents/dots
