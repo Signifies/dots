@@ -14,13 +14,15 @@ override-redirect = false
 font-0="SourceCodePro-Regular:pixelsize=12;1"
 modules-left=bspwm 
 modules-center=date pulseaudio
+;label Need to fix this first.
+;include-file = $HOME/.cache/wal/colors.sh 
 
-foreground =#9DA141
-background =#001a1a24 
+foreground =#9DA14
+background = #282A2E 
 
 fixed-center = true 
 tray-detached = false
-tray-position = right 
+tray-position = right   
 module-margin-left = 1 
 
 [bar/pella]
@@ -65,7 +67,7 @@ modules-center=date network
 ;--------;
 
 foreground = #2a1a24
-background = #001a1a24
+background = #282A2E 
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -135,7 +137,7 @@ time-alt=%H:%M:%S %A, %d %B %Y
 format=<label>
 label=%date% %time%
 label-foreground = #cddbf9
-label-background = #001a1a24
+label-background = ${background} 
 label-padding = 1
 
 [module/temperature]
@@ -150,10 +152,10 @@ label=TEMP: %temperature-c%
 label-warn=TEMP: %temperature-c%
 
 label-foreground = #cddbf9
-label-background = #001a1a24
+label-background = ${background}
 label-padding = 1
 label-warn-foreground = #cddbf9
-label-warn-background = #001a1a24
+label-warn-background = #${background}
 label-warn-padding = 1
 
 [module/cpu]
@@ -163,7 +165,7 @@ format=<label>
 label=CPU: %percentage%%
 
 label-foreground = #cddbf9
-label-background = #001a1a24
+label-background = ${background}
 label-padding = 1
 
 [module/memory]
@@ -173,7 +175,7 @@ format=<label>
 label=Mem: %gb_used%
 
 label-foreground = #cddbf9
-label-background = #001a1a24
+label-background = ${background}
 label-padding = 1
 
 [module/pulseaudio]
@@ -184,7 +186,7 @@ label-muted=muted
 click-right=pavucontrol
 
 label-volume-foreground = #cddbf9
-label-volume-background = #001a1a24
+label-volume-background = ${background}
 label-volume-padding = 1 
 
 label-muted-foreground = #cddbf9
@@ -202,11 +204,11 @@ label-empty=%name%
 label-empty-padding=2 
 
 label-focused-foreground = #f6bbe7
-label-focused-background = #50413E
+label-focused-background = #50413E 
 label-occupied-foreground = #cddbf9 
 label-occupied-background = #ac0138 
 label-empty-foreground = #cddbf9
-label-empty-background = #001a1a24
+label-empty-background = ${background}
 
 [module/network]
 type=internal/network
@@ -215,8 +217,8 @@ interval=3.0
 label-connected=%ifname%: %upspeed%|%downspeed%
 label-disconnected="%ifname%: offline"
 
-label-connected-foreground = #cddbf9
-label-connected-background = #50413E 
+label-connected-foreground = #008000 
+label-connected-background = ${background} 
 label-connected-padding = 1
 
 label-disconnected-foreground = #cddbf9

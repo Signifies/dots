@@ -1,14 +1,14 @@
 ##Foreign packages and explicit packages (aur)
 Linux pella x86_64
-Fri Apr 15 08:21:13 PM EDT 2022
+Tue Jul  5 09:53:28 PM EDT 2022
 # # # # # # # # # # # # # #
 ## AUR packages ##
 betterlockscreen
 cava
+electron9
 i3lock-color
 minecraft-launcher
 pfetch
-polybar
 python2-asn1crypto
 python2-backports
 python2-cachecontrol

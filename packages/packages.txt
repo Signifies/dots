@@ -1,6 +1,6 @@
 ## System packages:
 Linux pella x86_64
-Fri Apr 15 08:21:13 PM EDT 2022
+Tue Jul  5 09:53:28 PM EDT 2022
 # # # # # # # # # # # # # #
 a52dec
 acl
@@ -82,7 +82,9 @@ e2fsprogs
 ebook-tools
 efibootmgr
 efivar
+electron11
 electron13
+electron17
 electron9
 elfutils
 exiv2
@@ -253,6 +255,7 @@ libavc1394
 libb64
 libblockdev
 libbluray
+libbpf
 libbsd
 libbytesize
 libcanberra
@@ -406,7 +409,7 @@ libvisio
 libvisual
 libvorbis
 libvpx
-libvterm
+libvterm01
 libwacom
 libwebp
 libwebsockets
