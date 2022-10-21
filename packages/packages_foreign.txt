@@ -1,14 +1,22 @@
 ##Foreign packages and explicit packages (aur)
 Linux pella x86_64
-Tue Jul  5 09:53:28 PM EDT 2022
+Fri Oct 21 06:51:15 AM EDT 2022
 # # # # # # # # # # # # # #
 ## AUR packages ##
+apm
+atom
 betterlockscreen
 cava
+celt
+electron11
+electron13
 electron9
 i3lock-color
+libvterm01
 minecraft-launcher
 pfetch
+python2
+python2-appdirs
 python2-asn1crypto
 python2-backports
 python2-cachecontrol
@@ -22,9 +30,12 @@ python2-distlib
 python2-distro
 python2-enum34
 python2-html5lib
+python2-idna
 python2-importlib-metadata
 python2-ipaddress
 python2-msgpack
+python2-ordered-set
+python2-packaging
 python2-pathlib2
 python2-pep517
 python2-pip
@@ -32,10 +43,13 @@ python2-ply
 python2-progress
 python2-pycparser
 python2-pyopenssl
+python2-pyparsing
 python2-requests
 python2-resolvelib
 python2-retrying
 python2-scandir
+python2-setuptools
+python2-six
 python2-toml
 python2-urllib3
 python2-webencodings
@@ -63,6 +77,7 @@ dolphin
 efibootmgr
 fakeroot
 feh
+filezilla
 firefox
 flex
 fragments
@@ -97,6 +112,8 @@ pacman-contrib
 patch
 pcmanfm
 pfetch
+php
+php-fpm
 picom
 pkgconf
 polybar

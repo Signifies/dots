@@ -12,6 +12,7 @@
 # Update script to consolidate my dot files.
 # wallpapers
 cp $HOME/Pictures/MMW.jpg $HOME/Documents/dots
+cp $HOME/Pictures/poc.png $HOME/Documents/dots
 # Xresources
 # Notes
 cp $HOME/arch.md ~/Documents/dots
@@ -40,8 +41,11 @@ cp -r $HOME/.config/polybar $HOME/Documents/dots
 # bspwm
 cp -r ~/.config/bspwm/ $HOME/Documents/dots
 # sxhkd
-cp -r ~/.config/sxhkd/ $HOME/Documents/dots
-# Lemon Bar
+cp -r ~/.config/sxhkd/ $HOME/Documents/dots/sxhkd 
+# 
+# copy local startpage
+cp -r $HOME/startpage/ $HOME/Documents/dots 
+# 
 # cp -r ~/.config/panel/ $HOME/Documents/dots no panel rn.
 #echo "Copied Bar..."
 # Compton

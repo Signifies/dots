@@ -4,21 +4,21 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 urxvt &
 firefox &
 Spotify &
-picom &
-ranger &
+picom & 
+
 $HOME/.config/polybar/launch.sh &
 
 # Colors
 . "$HOME/.cache/wal/colors.sh"
-bspc monitor HDMI-2 -d primary terminals progrm sys-status  
-bspc monitor HDMI-1 -d 01 02 03 04 05 
+bspc monitor HDMI-2 -d internet dev terminal sys-status  
+bspc monitor HDMI-1 -d A B C D E  
 
 # This still remains broken.
 #for monitor in $(bspc query -M); do 
 #  bspc monitor $monitor -d 01 02 03 04 05 06 07 08 
 #done 
 
-bspc config border_width         5
+bspc config border_width         3
 bspc config window_gap          20
 
 bspc config normal_border_color $color1 
@@ -32,7 +32,7 @@ bspc config focus_follows_pointer true
 
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Firefox  desktop='^1' state=floating
+bspc rule -a Firefox  desktop='^6' state=floating
 #bspc rule -a mplayer2 state=floating
 bspc rule -a Spotify desktop='^1'
 bspc rule -a urxvt desktop='^1'

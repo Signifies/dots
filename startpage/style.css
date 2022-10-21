@@ -1,0 +1,92 @@
+
+/*./colors/colors.css ~/.cache/wal/colors.css when running locally on linux */
+@import "../.cache/wal/colors.css";
+body {
+  background-color: var(--background);
+}
+
+h3, h4{
+
+  color: var(--color4);
+}
+
+img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+table, th, td {
+  border-spacing: 5px;
+  border: none;
+  border-collapse: collapse;
+  text-align: center;
+  color: var(--color4);
+
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: color 2s;
+  transition: color 2s;
+}
+
+
+a:link {
+  color: var(--foreground);
+}
+
+.weatherwidget-io {
+  max-width: 344px;
+  max-height: 205px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: 2px outset var(--color5);
+}
+
+input {
+    font-family: monospace;
+    background-color: #282828;
+    border-color: #282828;
+    border-style: solid;
+    color: #ebdbb2;
+    outline: none !important;
+    margin: 10px 10px 10px 10px;
+    opacity: 0.5;
+  }
+
+a:hover {
+  color: var(--color6);
+}
+
+a:visited {
+  color: var(--foreground);
+}
+
+details {
+  color: var(--color5);
+}
+
+footer {
+   position:absolute;
+   bottom:0;
+   margin-left: 5px;
+   margin-bottom: 5px;
+   width:100%;
+   height:40px;   /* Height of the footer */
+   color: var(--color6);
+   font-size: 15px;
+}
