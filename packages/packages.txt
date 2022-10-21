@@ -1,6 +1,6 @@
 ## System packages:
 Linux pella x86_64
-Tue Jul  5 09:53:28 PM EDT 2022
+Fri Oct 21 06:51:15 AM EDT 2022
 # # # # # # # # # # # # # #
 a52dec
 acl
@@ -15,9 +15,7 @@ apparmor
 arch-wiki-docs
 archlinux-keyring
 argon2
-at-spi2-atk
 at-spi2-core
-atk
 atkmm
 atom
 attica
@@ -64,6 +62,7 @@ convertlit
 coreutils
 cryptsetup
 curl
+cython
 dav1d
 db
 dbus
@@ -78,6 +77,7 @@ dnssec-anchors
 dolphin
 dosfstools
 double-conversion
+duktape
 e2fsprogs
 ebook-tools
 efibootmgr
@@ -85,6 +85,8 @@ efivar
 electron11
 electron13
 electron17
+electron18
+electron19
 electron9
 elfutils
 exiv2
@@ -98,6 +100,7 @@ ffmpeg4.4
 fftw
 file
 filesystem
+filezilla
 findutils
 firefox
 flac
@@ -187,6 +190,8 @@ jbig2dec
 jdk11-openjdk
 jre11-openjdk
 jre11-openjdk-headless
+jre17-openjdk
+jre17-openjdk-headless
 jre8-openjdk
 jre8-openjdk-headless
 js78
@@ -256,6 +261,7 @@ libb64
 libblockdev
 libbluray
 libbpf
+libbs2b
 libbsd
 libbytesize
 libcanberra
@@ -263,6 +269,7 @@ libcap
 libcap-ng
 libcdr
 libcloudproviders
+libcmis
 libcolord
 libconfig
 libcroco
@@ -288,6 +295,7 @@ libevent
 libexif
 libexttextcat
 libffi
+libfilezilla
 libfm
 libfm-extra
 libfm-gtk2
@@ -313,6 +321,7 @@ libinput
 libisl
 libixion
 libjpeg-turbo
+libkexiv2
 libksba
 liblangtag
 libldap
@@ -329,6 +338,7 @@ libmpc
 libmpcdec
 libmpdclient
 libmpeg2
+libmspack
 libmspub
 libmtp
 libmwaw
@@ -360,6 +370,7 @@ libplist
 libpng
 libproxy
 libpsl
+libptytty
 libpulse
 libqxp
 libraqm
@@ -405,10 +416,12 @@ libusbmuxd
 libuv
 libva
 libvdpau
+libverto
 libvisio
 libvisual
 libvorbis
 libvpx
+libvterm
 libvterm01
 libwacom
 libwebp
@@ -507,11 +520,14 @@ npm
 npth
 nspr
 nss
+ocl-icd
+oniguruma
 openal
 opencore-amr
 openjpeg2
 openmpi
 openntpd
+openpmix
 openssh
 openssl
 opus
@@ -540,6 +556,8 @@ perl-timedate
 pfetch
 phonon-qt5
 phonon-qt5-gstreamer
+php
+php-fpm
 picom
 pinentry
 pixman
@@ -555,11 +573,14 @@ psmisc
 pulseaudio
 python
 python-appdirs
+python-autocommand
 python-cachecontrol
 python-cairo
+python-certifi
 python-cffi
 python-chardet
 python-colorama
+python-commonmark
 python-contextlib2
 python-cryptography
 python-defusedxml
@@ -572,22 +593,30 @@ python-gobject
 python-html5lib
 python-idna
 python-importlib-metadata
+python-inflect
+python-jaraco.context
+python-jaraco.functools
+python-jaraco.text
 python-jinja
 python-markdown
 python-markupsafe
 python-more-itertools
 python-msgpack
+python-nspektr
 python-ordered-set
 python-packaging
 python-pep517
 python-pexpect
 python-pip
+python-platformdirs
 python-ply
 python-progress
 python-psutil
 python-ptyprocess
 python-pyalsa
 python-pycparser
+python-pydantic
+python-pygments
 python-pyopenssl
 python-pyparsing
 python-pyqt5
@@ -597,12 +626,17 @@ python-pywal
 python-requests
 python-resolvelib
 python-retrying
+python-rich
 python-setuptools
 python-six
 python-sqlalchemy1.3
+python-tenacity
 python-toml
 python-tomli
+python-trove-classifiers
+python-typing_extensions
 python-urllib3
+python-validate-pyproject
 python-webencodings
 python-websockets
 python-yaml
@@ -646,6 +680,7 @@ python2-toml
 python2-urllib3
 python2-webencodings
 python2-zipp
+qca-qt5
 qt5-base
 qt5-declarative
 qt5-location
@@ -740,6 +775,8 @@ wayland-protocols
 webrtc-audio-processing
 which
 wpa_supplicant
+wxwidgets-common
+wxwidgets-gtk3
 x264
 x265
 xboard
